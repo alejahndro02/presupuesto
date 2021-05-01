@@ -1,7 +1,9 @@
+//Modulos
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
+//Componentes
 import { AppComponent } from './app.component';
 import { GastosComponent } from './components/gastos/gastos.component';
 import { IngresarGastoComponent } from './components/gastos/ingresar-gasto/ingresar-gasto.component';
@@ -18,7 +20,8 @@ import { PresupuestoComponent } from './components/presupuesto/presupuesto.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
