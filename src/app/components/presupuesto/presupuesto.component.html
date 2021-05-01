@@ -3,8 +3,11 @@
         <h2 class="text-center font-title ">Calcular Gastos</h2>
         <div class="card">
             <div class="card-body">
-                <input type="number" class="form-control form-control-lg" placeholder="Ingrese su presupuesto..">
-                <button class="btn btn-secondary btn-lg btn-block mt-3">Aceptar</button>
+                <div *ngIf="cantidadIncorrecta" class="mb-1">
+                    <span class="badge bg-danger error">El presupuesto debe ser mayor a cero</span>
+                </div>
+                <input type="number" [(ngModel)]='cantidad' class="form-control form-control-lg" placeholder="Ingrese su presupuesto..">
+                <button class="btn btn-secondary btn-lg btn-block mt-3" (click)="agregar()">Aceptar</button>
             </div>
         </div>
     </div>
