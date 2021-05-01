@@ -14,3 +14,7 @@ body {
     font-family: 'Orelega One', 'New Tegomin', serif;
     text-transform: uppercase;
 }
+
+.error {
+    font-size: 1rem;
+}
