@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./presupuesto.component.css']
 })
 export class PresupuestoComponent implements OnInit {
+  cantidad: number;
+  cantidadIncorrecta : boolean;
 
-  constructor() { }
+  constructor() { 
+    this.cantidad = 0;
+    this.cantidadIncorrecta = false;
+  }
 
   ngOnInit(): void {
   }
-
+  agregar(){
+    if( this.cantidad > 0 ) {
+     this.cantidadIncorrecta = false; 
+    }else{
+     this.cantidadIncorrecta = true;
+    }
+  }
 }
