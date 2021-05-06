@@ -1,3 +1,4 @@
+import { PresupuestoService } from './../../../services/presupuesto.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarGastoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _presupuestoService: PresupuestoService) {
+    this._presupuestoService.getGasto().subscribe(data => console.log(data)
+    );
+  }
 
   ngOnInit(): void {
   }
