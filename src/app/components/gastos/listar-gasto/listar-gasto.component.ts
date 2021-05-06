@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
 })
 export class ListarGastoComponent implements OnInit, OnDestroy {
   subscription : Subscription;
-  presupuesto: number;
+  presupuesto:  number;
   restante: number;
 
   constructor(private _presupuestoService: PresupuestoService) {
