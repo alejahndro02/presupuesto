@@ -6,10 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ingresar-gasto.component.css']
 })
 export class IngresarGastoComponent implements OnInit {
+  nombreGasto: string;
+  cantidad:number
+  formularioIncorrecto:boolean;
+  cantidadMayorPresupuesto:string;
 
-  constructor() { }
+  constructor() {
+    this.nombreGasto= '';
+    this.cantidad=0;
+    this.formularioIncorrecto= false;
+    this.cantidadMayorPresupuesto='Nombre Gasto o Cantidad Incorrecta';
+  }
 
   ngOnInit(): void {
   }
+  agergarGasto(){
+    if(this.nombreGasto === '' || this.cantidad <= 0){
+      this.formularioIncorrecto = true;
+    } else {
+      this.formularioIncorrecto = false;
+      this.nombreGasto= '';
+      this.cantidad=0;
 
+    }
+  }
 }
